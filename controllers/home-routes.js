@@ -10,33 +10,9 @@ router.get('/', async (req, res) => {
 
 //get Dashboard
 // Use withAuth middleware to prevent access to route
-router.get('/dashboard', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userDashboard = await Dashboard.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-    });
-
-    const user = userDashboard.get({ plain: true });
-
-    res.render('dashboard', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 
 //get Login
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
-    return;
-  }
+//// Use withAuth middleware to prevent access to route
 
-  res.render('login');
-});
 
 module.exports = router;
