@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const {  } = require('../models');
+const { Post } = require('../models');
 const withAuth = require('../utils/auth');
 
-//get Dashboard home
-//verify user is logged in
 
+//findall
+//newpost
+//editing
