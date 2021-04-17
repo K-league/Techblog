@@ -1,0 +1,6 @@
+<div class="post list-group">
+    {{#each posts}}
+    <a href="/dashboard/edit/{{id}}" class="list-item flex-row justilfy-space-between">
+    <span>{{title}}</span><span>{{form_date createAt}}</span></a>
+    {{/each}}
+</div>

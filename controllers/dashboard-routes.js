@@ -4,5 +4,8 @@ const withAuth = require('../utils/auth');
 
 
 //findall
+router.get
 //newpost
+router.get
 //editing
+router.get
