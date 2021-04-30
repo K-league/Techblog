@@ -9,3 +9,4 @@ router.post('/')
 
 
 // three post routes
+module.exports = router

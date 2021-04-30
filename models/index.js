@@ -4,7 +4,7 @@ const Post = require('./Post');
 const Comment = require('./Comment');
 
 //Posts belong to User
-Post.belongsto(User, {
+Post.belongsTo(User, {
     foreignKey: 'post_id'
 });
 //Posts have many comments
@@ -12,7 +12,7 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
 //Comments belong to User
-Comment.belongsto(User, {
+Comment.belongsTo(User, {
     foreignKey: 'comment_id'
 });
 

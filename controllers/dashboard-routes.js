@@ -9,3 +9,5 @@ router.get
 router.get
 //editing
 router.get
+
+module.exports = router
